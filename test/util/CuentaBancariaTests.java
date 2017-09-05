@@ -13,7 +13,7 @@ public class CuentaBancariaTests {
 	
 	@Before
 	public void setUp() {
-		cuentaA = new CuentaBancaria(100);
+		cuentaA = new CuentaBancaria(0);
 		cuentaB = new CuentaBancaria(0);
 	}
 	
@@ -21,7 +21,12 @@ public class CuentaBancariaTests {
 	public void transfiereSaldoHacia() {		
 		cuentaA.transferirMontoHacia(300, cuentaB);
 		Assert.assertEquals(300, cuentaB.consultarSaldo(), 0);
-
+		
+	}
+	
+	@Test(expected=IllegalArgumentException.class)
+	public void saldoInicialPositivo() {
+		cuentaA = new CuentaBancaria(-50);
 	}
 
 }
