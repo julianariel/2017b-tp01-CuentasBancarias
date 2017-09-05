@@ -26,7 +26,7 @@ public class CuentaBancariaTests {
 	
 	@Test(expected=IllegalArgumentException.class)
 	public void saldoInicialPositivo() {
-		cuentaA = new CuentaBancaria(-50);
+		cuentaA = new CuentaBancaria(-100);
 	}
 
 }
