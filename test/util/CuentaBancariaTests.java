@@ -13,16 +13,15 @@ public class CuentaBancariaTests {
 	
 	@Before
 	public void setUp() {
-		cuentaA = new CuentaBancaria(1000);
+		cuentaA = new CuentaBancaria(100);
 		cuentaB = new CuentaBancaria(0);
 	}
 	
-	@Test
+	@Test(expected=IllegalArgumentException.class)
 	public void transfiereSaldoHacia() {		
-		cuentaA.transferirMontoHacia(100, cuentaB);
-		Assert.assertEquals(100, cuentaB.consultarSaldo(), 0);
+		cuentaA.transferirMontoHacia(200, cuentaB);
+		Assert.assertEquals(200, cuentaB.consultarSaldo(), 0);
 
-		Assert.assertEquals(900, cuentaA.consultarSaldo(), 0);
 	}
 
 }
