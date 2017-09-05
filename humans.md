@@ -7,5 +7,5 @@
 
 ## Estudiantes
 
-* XXX ([xxx](https://github.com/xxx))
-* XXX ([xxx](https://github.com/xxx))
+* Julián Ariel Martínez ([julianariel](https://github.com/julianariel))
+* Rodrigo Ezequiel Calvo ([rodrigocalvo](https://github.com/rodrigocalvo))
