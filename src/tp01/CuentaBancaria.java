@@ -2,29 +2,26 @@ package tp01;
 
 public class CuentaBancaria {
 
-	private double n = 0;
+	private double saldo = 0;
 	
 	
-	public CuentaBancaria(double n) {	
-		if (n == -50)
-			throw new IllegalArgumentException();
-
-		if (n == -100)
-			throw new IllegalArgumentException();
+	public CuentaBancaria(double saldoInicial) {	
+		if (saldoInicial < 0)
+			throw new IllegalArgumentException("El saldo inicial de la cuenta no puede ser negativo");
 		
-		this.n = n;
+		this.saldo = saldoInicial;
 	}
 
 
 	public double consultarSaldo() {
-		return n;
+		return saldo;
 	}
 	
-	public void transferirMontoHacia(double n, CuentaBancaria cuentaDestino) {
-		if (n > this.n)
+	public void transferirMontoHacia(double monto, CuentaBancaria cuentaDestino) {
+		if (monto > this.saldo)
 			throw new IllegalArgumentException("El saldo de la cuenta origen es insucifiente");
 		
-		this.n -= n;
-		cuentaDestino.n += n;
+		this.saldo -= monto;
+		cuentaDestino.saldo += monto;
 	}
 }
