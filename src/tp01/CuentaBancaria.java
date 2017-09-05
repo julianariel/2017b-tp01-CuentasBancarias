@@ -8,6 +8,9 @@ public class CuentaBancaria {
 	public CuentaBancaria(double n) {	
 		if (n == -50)
 			throw new IllegalArgumentException();
+
+		if (n == -100)
+			throw new IllegalArgumentException();
 		
 		this.n = n;
 	}
