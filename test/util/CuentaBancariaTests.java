@@ -20,8 +20,8 @@ public class CuentaBancariaTests {
 	@Test
 	public void transfiereSaldoHacia() {
 		
-		cuentaA.transferirMontoHacia(20, cuentaB);
-		Assert.assertEquals(20, cuentaB.consultarSaldo(), 0);
+		cuentaA.transferirMontoHacia(100, cuentaB);
+		Assert.assertEquals(100, cuentaB.consultarSaldo(), 0);
 	}
 
 }
