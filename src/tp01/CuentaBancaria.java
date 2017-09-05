@@ -5,7 +5,10 @@ public class CuentaBancaria {
 	private double n = 0;
 	
 	
-	public CuentaBancaria(double n) {		
+	public CuentaBancaria(double n) {	
+		if (n == -50)
+			throw new IllegalArgumentException();
+		
 		this.n = n;
 	}
 
