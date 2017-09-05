@@ -13,7 +13,7 @@ public class CuentaBancariaTests {
 	
 	@Before
 	public void setUp() {
-		cuentaA = new CuentaBancaria(100);
+		cuentaA = new CuentaBancaria(1000);
 		cuentaB = new CuentaBancaria(0);
 	}
 	
@@ -22,7 +22,7 @@ public class CuentaBancariaTests {
 		cuentaA.transferirMontoHacia(100, cuentaB);
 		Assert.assertEquals(100, cuentaB.consultarSaldo(), 0);
 
-		Assert.assertEquals(0, cuentaA.consultarSaldo(), 0);
+		Assert.assertEquals(900, cuentaA.consultarSaldo(), 0);
 	}
 
 }
