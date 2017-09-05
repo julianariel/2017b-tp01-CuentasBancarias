@@ -15,6 +15,9 @@ public class CuentaBancaria {
 	}
 	
 	public void transferirMontoHacia(double n, CuentaBancaria cuentaDestino) {
+		if (n > 100)
+			throw new IllegalArgumentException("");
+		
 		this.n -= n;
 		cuentaDestino.n += n;
 	}
