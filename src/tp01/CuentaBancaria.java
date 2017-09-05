@@ -15,8 +15,8 @@ public class CuentaBancaria {
 	}
 	
 	public void transferirMontoHacia(double n, CuentaBancaria cuentaDestino) {
-		if (n > 100)
-			throw new IllegalArgumentException("");
+		if (n > this.n)
+			throw new IllegalArgumentException("El saldo de la cuenta origen es insucifiente");
 		
 		this.n -= n;
 		cuentaDestino.n += n;

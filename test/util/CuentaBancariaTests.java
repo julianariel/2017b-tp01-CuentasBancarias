@@ -19,8 +19,8 @@ public class CuentaBancariaTests {
 	
 	@Test(expected=IllegalArgumentException.class)
 	public void transfiereSaldoHacia() {		
-		cuentaA.transferirMontoHacia(200, cuentaB);
-		Assert.assertEquals(200, cuentaB.consultarSaldo(), 0);
+		cuentaA.transferirMontoHacia(300, cuentaB);
+		Assert.assertEquals(300, cuentaB.consultarSaldo(), 0);
 
 	}
 
