@@ -15,6 +15,7 @@ public class CuentaBancaria {
 	}
 	
 	public void transferirMontoHacia(double n, CuentaBancaria cuentaDestino) {
+		this.n = 0;
 		cuentaDestino.n += n;
 	}
 }
